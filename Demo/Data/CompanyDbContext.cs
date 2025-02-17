@@ -19,11 +19,13 @@ namespace Demo.Data
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.ApplyConfigurationsFromAssembly(Assembly.GetExecutingAssembly());
+            modelBuilder.Entity<EmployeeDepartmentView>().ToView("EmployeeDepartmentView").HasNoKey(); 
         }
         public DbSet<Department> Departments { get; set; }
         public DbSet<Employee> Employees { get; set; }
         public DbSet<Course> Courses { get; set; }
         public DbSet<Student> Students {  get; set; }
         public DbSet<StudentCourse> StudentCourses {  get; set; }
+        public DbSet<EmployeeDepartmentView> EmployeeDepartmentView { get; set; }
     }
 }

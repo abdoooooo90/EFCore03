@@ -9,7 +9,7 @@ namespace Demo
     {
         static void Main(string[] args)
         {
-            //using CompanyDbContext dbContext = new CompanyDbContext();
+            using CompanyDbContext dbContext = new CompanyDbContext();
             //CompanyDbContextSeed.Seed(dbContext); // DataSeeding
             #region Navigational Properities
             #region Example01
@@ -226,6 +226,14 @@ namespace Demo
             #endregion
             #endregion
 
+            #region Mapping View
+            ////var Result = from item in dbContext.EmployeeDepartmentView
+            //  //           select item;
+            //foreach (var item in /*Result*/ dbContext.EmployeeDepartmentView)
+            //{
+            //    Console.WriteLine($"{item.EmployeeName}, {item.DepartmentName}");
+            //}
+            #endregion
         }
     }
 }
